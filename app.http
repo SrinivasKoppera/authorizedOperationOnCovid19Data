@@ -1,0 +1,65 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "Srinivas@123",
+    "name" : "Srinivas",
+    "password" : "srinivas@123456",
+    "gender" : "male",
+    "location": "Hyderabad"
+}
+###
+POST http://localhost:3000/login/ 
+Content-Type: application/json
+
+{
+    "username": "Srinivas@123",
+    "password": "srinivas@123456"
+}
+###
+GET http://localhost:3000/states
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo
+
+###
+GET http://localhost:3000/states/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo
+###
+
+POST http://localhost:3000/districts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+###
+
+GET http://localhost:3000/districts/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo
+###
+
+DELETE http://localhost:3000/districts/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo
+### 
+
+PUT http://localhost:3000/districts/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo 
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+### 
+
+GET http://localhost:3000/states/3/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNyaW5pdmFzQDEyMyIsImlhdCI6MTY4NDU3NjE2MX0.qT7EZcsKnGIYgy_Ms75rRYS7C8v8sTTz0yFHMO9jOEo
